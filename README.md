@@ -6,7 +6,9 @@ Detta projekt analyserar försäljningsdata från en e-handelsplattform för att
 
 - Magdalena har tagit fram analyser för intäkt per kategori och intäkt per stad. Förberett datan för visualisering samt rensade datan genom att kontrollera och ta bort dubbletter.
 
-- Katarina analyserade intäkt per månad och vecka samt skapat stapel- och linjediagram för att visa försäljningstrender över tid. Hon har även börjad skriva sammanfattning i README- sektionen. 
+- Katarina analyserade intäkt per månad och vecka samt skapade stapel- och linjediagram för att visa försäljningstrender över tid. Hon har även börjad skriva sammanfattning i README- sektionen. 
+
+- Katarina har gjort färdigt intäkter per månad/veckor - nyckeltalen inklusive 2-3 rekommendationer. 
 
 ## Hur man kör projektet:
 1. Klona repot: git clone <repo-url>
