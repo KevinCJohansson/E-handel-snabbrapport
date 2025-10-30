@@ -50,3 +50,16 @@ def plot_revenue_week(df):
     plt.tight_layout()
     plt.savefig("../data/images/fig_intakt_per_vecka.png", dpi=200)
     plt.show()
+import pandas as pd
+
+def bar(ax, x, y, title, xlabel, ylabel, grid: bool = True):
+    ax.bar(x, y)
+    ax.set_title(title)
+    ax.set_xlabel(xlabel)
+    ax.set_ylabel(ylabel)
+    ax.grid(grid, axis="y")
+    plt.setp(ax.get_xticklabels(), rotation=45)
+    plt.tight_layout()
+    return ax
+
+
