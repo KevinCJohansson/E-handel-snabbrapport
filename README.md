@@ -54,5 +54,5 @@ python -m venv . venv
 # source .venv/bin/activate
 
 # instalera beroenden
-python -m pip install 
+python -m pip install -r requirement.txt
 ```
