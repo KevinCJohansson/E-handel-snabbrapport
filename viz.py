@@ -61,5 +61,38 @@ def bar(ax, x, y, title, xlabel, ylabel, grid: bool = True):
     plt.setp(ax.get_xticklabels(), rotation=45)
     plt.tight_layout()
     return ax
+def plot_city_revenue(df, median_revenue):
 
+    color_map = {"Låg": "darkred", "Normal": "yellow", "Hög": "darkgreen"}
+    df_sorted = df.sort_values(by="revenue", ascending=False)
+    plt.figure(figsize=(8, 5))
+    bars = plt.bar(df_sorted["city"], df_sorted["revenue"], color=[color_map[d] for d in df_sorted["deviation"]])
 
+    plt.axhline(median_revenue, color="black", linestyle="--", label= f"Median: {median_revenue:,.0f}")
+    
+    plt.title("Revenue per stad med avvikelsemarkering", fontsize=12)
+    plt.xlabel("Stad")
+    plt.ylabel("Revenue")
+    plt.xticks(rotation=45)
+    plt.legend(title="Avvikelse", loc="upper right")
+     
+    for bar in bars:
+        height = bar.get_height()
+        plt.text(bar.get_x() + bar.get_width()/2, height + (height * 0.02),f"{height:,.0f}",
+                ha="center", va="bottom", fontsize=9)
+        
+    plt.tight_layout()
+    plt.savefig("../data/images/fig_city_revenue.png", dpi=200)
+    plt.show()
+
+def plot_monthly_revenue(monthly_revenue):
+    
+    plt.figure(figsize= (8, 5))
+    plt.plot(monthly_revenue.index.astype(str), monthly_revenue.values, marker = "o")
+    plt.title("Revenue per månad")
+    plt.xlabel("Månad")
+    plt.ylabel("Revenue")
+    plt.xticks(rotation= 60)
+    plt.tight_layout()
+    plt.savefig("../data/images/fig_monthly_revenue.png", dpi=200)
+    plt.show()
