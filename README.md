@@ -14,7 +14,7 @@ Detta projekt analyserar försäljningsdata från en e-handelsplattform för att
 
 - Jan började arbeta med eventuella avvikelser (något oväntat mönster), samtidigt som Magdalena ritade upp grafer och städade upp hennes koder. 
 
-## Raport
+## Rapport (Slutsatser baserat på aktuell data)
 ### Nyckeltal (från notebooken, efter lätt städning):
 - **Produktkategorier som driver nest intäkt:** 1. Elektronik 2. Sport 3. Kläder
 - **Städer som står för störst del av intäkten:** 1. Stockholm 2. Göteborg 3. Malmö
@@ -24,6 +24,10 @@ Detta projekt analyserar försäljningsdata från en e-handelsplattform för att
 - **Spridning mellan ordrar:**
 - **Topp 3 kategorier:** 1. Elektronik 2. Sport 3. Kläder
 - **Eventuella avvikelser:**
+- Vid analys av omsättning per stad ser man tydligt att Stockholm ligger över 30% över genomsnittet. Göteborg, Malmö och Uppsala ligger inom den vanliga gränsen. Västerås har en negativ/låg avvikelse med mer än 30% mindre än genomsnittet.
+- Analysen visar tydligt hur efterfrågan varierar mellan de olika kategorierna. Kategorien "Beauty" minskar krafitgt i februari (-52%) men ökar kraftigt i Mars (+68%). Electronics kategorien visar en stor nedgång i Mars med (-41%) medan Clothing och Sports kategorien ökar kraftigt under våren.
+- Analysen visar att några ordrar har ovanligt hög units värde (>7), vilket gör dem tyligt större än genomsnittet. Det finns flera ordar med mycket låg omsättning,ofta under 100 kr jamfört med medianen på cirka 1089 kr. Priserna i sig verkar stabila mellan kategorierna.
+- I analysen av "Revenue per månad" hittar man inga konsithgeter dvs inga hopp eller extrem stora skillnader mellan månaderna dock så är revenuen lägst i månaden Mars 
 
 
 ### Figurer
@@ -31,8 +35,7 @@ Detta projekt analyserar försäljningsdata från en e-handelsplattform för att
 ![Intäkt per vecka](../data/images/inakt_per_vecka.png)
 ![Intäkt per stad](../data/images/inakt_per_stad.png)
 ![Intäkt per kategori](../data/images/inakt_per_kategori.png)
-
-### Slutsatser baserad på aktuell data :
+![Intäkt per stad med avvikelsemarkering](..data/images/fig_city_revenue.png)
 
 
 ## Miljö
