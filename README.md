@@ -12,9 +12,12 @@ Detta projekt analyserar försäljningsdata från en e-handelsplattform för att
 
 - Kevin undersökte hur mycket kunder brukar handla för per order, alltså AOV (Average Order Value), och om det varierar mycket mellan ordrar. Han skapade en graf, där man enkelt kan läsa av resultatet. 
 
-- Jan började arbeta med eventuella avvikelser (något oväntat mönster), samtidigt som Magdalena ritade upp grafer och städade upp hennes koder. 
+- Jan arbetade med eventuella avvikelser (något oväntat mönster), samtidigt som Magdalena ritade upp grafer och städade upp hennes koder. 
 
-## Raport
+- Tillsammans flyttade vi Jans observationer till README, städade upp hela report.
+
+
+## Rapport/ Slutsatser baserad på aktuell data
 ### Nyckeltal (från notebooken, efter lätt städning):
 - **Produktkategorier som driver nest intäkt:** 1. Elektronik 2. Sport 3. Kläder
 - **Städer som står för störst del av intäkten:** 1. Stockholm 2. Göteborg 3. Malmö
@@ -23,7 +26,7 @@ Detta projekt analyserar försäljningsdata från en e-handelsplattform för att
 - **Genomsnittlig värde av en order:**
 - **Spridning mellan ordrar:**
 - **Topp 3 kategorier:** 1. Elektronik 2. Sport 3. Kläder
-- **Eventuella avvikelser:**
+- **Eventuella avvikelser/ Observationer:** 
 
 
 ### Figurer
@@ -31,8 +34,6 @@ Detta projekt analyserar försäljningsdata från en e-handelsplattform för att
 ![Intäkt per vecka](../data/images/inakt_per_vecka.png)
 ![Intäkt per stad](../data/images/inakt_per_stad.png)
 ![Intäkt per kategori](../data/images/inakt_per_kategori.png)
-
-### Slutsatser baserad på aktuell data :
 
 
 ## Miljö
@@ -45,7 +46,7 @@ Detta projekt analyserar försäljningsdata från en e-handelsplattform för att
 # klona projektet
 git clone https://github.com/KevinCJohansson/E-handel-snabbrapport.git
 
-cd E-HANDEL-SNABRAPORT
+cd E-HANDEL-SNABRAPPORT
 
 # Skapa och aktivera virtuell miljö
 python -m venv . venv
