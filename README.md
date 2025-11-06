@@ -16,19 +16,21 @@ Detta projekt analyserar försäljningsdata från en e-handelsplattform för att
 
 ## Raport
 ### Nyckeltal (från notebooken, efter lätt städning):
-- **Produktkategorier som driver nest intäkt:**
-- **Städer som står för störst del av intäkten:**
+- **Produktkategorier som driver nest intäkt:** 1. Elektronik 2. Sport 3. Kläder
+- **Städer som står för störst del av intäkten:** 1. Stockholm 2. Göteborg 3. Malmö
 - **Månad med högsta intäkter:** Januari med 664 083.32 kr
 - **Vecka med högsta intäkter:** v22, i mitten av Juni 
 - **Genomsnittlig värde av en order:**
 - **Spridning mellan ordrar:**
-- **Topp 3 kategorier:**
+- **Topp 3 kategorier:** 1. Elektronik 2. Sport 3. Kläder
 - **Eventuella avvikelser:**
 
 
 ### Figurer
 ![Intäkt per månad](../data/images/fig_intakt_per_manad.png)
 ![Intäkt per vecka](../data/images/inakt_per_vecka.png)
+![Intäkt per stad](../data/images/inakt_per_stad.png)
+![Intäkt per kategori](../data/images/inakt_per_kategori.png)
 
 ### Slutsatser baserad på aktuell data :
 
