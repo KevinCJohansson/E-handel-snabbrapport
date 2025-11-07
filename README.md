@@ -1,8 +1,8 @@
 ## Projektöversikt:
 Detta projekt analyserar försäljningsdata från en e-handelsplattform för att identifera trender och toppar i omsättningen över tid. Vi i Studiegrupp 4 använder Python och bibliotek som pandas och matplotlib för att bearbeta data och visualisera resultat.
 
-## Vad som hittils är gjort (Roller och ansvar):
-- Kevin skapade projektets mappstruktur utifrån intruktioner och initierade GitHub-ropositories. Delade detta så att alla kunde klona och arbeta vidare i samma klonbas.
+## Vad som hittills är gjort (Roller och ansvar):
+- Kevin skapade projektets mappstruktur utifrån instruktioner och initierade GitHub-repositories. Delade detta så att alla kunde klona och arbeta vidare i samma klonbas.
 
 - Magdalena har tagit fram analyser för intäkt per kategori och intäkt per stad. Förberett datan för visualisering samt rensade datan genom att kontrollera och ta bort dubbletter.
 
@@ -10,9 +10,15 @@ Detta projekt analyserar försäljningsdata från en e-handelsplattform för att
 
 - Katarina har gjort färdigt intäkter per månad/veckor - nyckeltalen inklusive 2-3 rekommendationer samt städat upp allt i rätt mapp (viz, metrics, images)
 
-- Kevin undersökte hur mycket kunder brukar handla för per order, alltså AOV (Average Order Value), och om det varierar mycket mellan ordrar. Han skapade en graf, där man enkelt kan läsa av resultatet. 
+- Kevin undersökte hur mycket kunder brukar handla för per order, alltså AOV (Average Order Value) och spridning mellan ordrar. Han skapade grafer, där man enkelt kan läsa av resultatet. 
 
 - Jan började arbeta med eventuella avvikelser (något oväntat mönster), samtidigt som Magdalena ritade upp grafer och städade upp hennes koder. 
+
+- Kevin städade upp sina koder/grafer.
+
+- Biljana tog fram jämförelse av top 2 kategorier i top 3 städer. En extra issue vi la till som finns längst ner i vår report.
+
+- Vi har säkrat att koden går att köra igenom från början till slut och lämnat in projektet tillsammans.
 
 ## Rapport (Slutsatser baserat på aktuell data)
 ### Nyckeltal (från notebooken, efter lätt städning):
@@ -21,13 +27,11 @@ Detta projekt analyserar försäljningsdata från en e-handelsplattform för att
 - **Månad med högsta intäkter:** Januari med 664 083.32 kr
 - **Vecka med högsta intäkter:** v22, i mitten av Juni 
 - **Genomsnittlig värde av en order:** 1401kr (1232 utan extremvärden)
-- **Spridning mellan ordrar:**
 - **Topp 3 kategorier:** 1. Elektronik 2. Sport 3. Kläder
-- **Eventuella avvikelser:**
-- Vid analys av omsättning per stad ser man tydligt att Stockholm ligger över 30% över genomsnittet. Göteborg, Malmö och Uppsala ligger inom den vanliga gränsen. Västerås har en negativ/låg avvikelse med mer än 30% mindre än genomsnittet.
-- Analysen visar tydligt hur efterfrågan varierar mellan de olika kategorierna. Kategorien "Beauty" minskar krafitgt i februari (-52%) men ökar kraftigt i Mars (+68%). Electronics kategorien visar en stor nedgång i Mars med (-41%) medan Clothing och Sports kategorien ökar kraftigt under våren.
-- Analysen visar att några ordrar har ovanligt hög units värde (>7), vilket gör dem tyligt större än genomsnittet. Det finns flera ordar med mycket låg omsättning,ofta under 100 kr jamfört med medianen på cirka 1089 kr. Priserna i sig verkar stabila mellan kategorierna.
-- I analysen av "Revenue per månad" hittar man inga konsithgeter dvs inga hopp eller extrem stora skillnader mellan månaderna dock så är revenuen lägst i månaden Mars 
+- **Eventuella avvikelser/observationer:**
+- Vid analys av omsättning per stad ser man tydligt att Stockholm ligger 30% över genomsnittet. Göteborg, Malmö och Uppsala ligger inom den vanliga gränsen. Västerås har en negativ/låg avvikelse med mer än 30% mindre än genomsnittet.
+- Analysen visar tydligt hur efterfrågan varierar mellan de olika kategorierna. Kategorin "Beauty" minskar kraftigt i februari (-52%) men ökar kraftigt i Mars (+68%). Electronics kategorin visar en stor nedgång i Mars med (-41%) medan Clothing och Sports kategorin ökar kraftigt under våren.
+- Analysen visar att några ordrar har ovanligt hög units värde (>7), vilket gör dem tydligt större än genomsnittet. Det finns flera ordar med mycket låg omsättning, ofta under 100 kr jämfört med medianen på cirka 1089 kr. Priserna i sig verkar stabila mellan kategorierna.
 
 
 ### Figurer
@@ -53,7 +57,7 @@ Detta projekt analyserar försäljningsdata från en e-handelsplattform för att
 # klona projektet
 git clone https://github.com/KevinCJohansson/E-handel-snabbrapport.git
 
-cd E-HANDEL-SNABRAPORT
+cd E-handel-snabbrapport
 
 # Skapa och aktivera virtuell miljö
 python -m venv . venv
@@ -63,6 +67,6 @@ python -m venv . venv
 # macOs\ Linux
 # source .venv/bin/activate
 
-# instalera beroenden
+# installera beroenden
 python -m pip install -r requirement.txt
 ```
