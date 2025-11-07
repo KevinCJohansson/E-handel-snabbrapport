@@ -96,3 +96,75 @@ def plot_monthly_revenue(monthly_revenue):
     plt.tight_layout()
     plt.savefig("../data/images/fig_monthly_revenue.png", dpi=200)
     plt.show()
+
+def average_order_value(df):
+    orders = df.revenue
+    std = np.std(orders)
+    mean = np.mean(orders)
+
+    plt.figure(figsize=(8, 5))
+    plt.hist(orders, bins=20, edgecolor='black', alpha=0.7)
+    plt.axvline(mean, color='red', linestyle='dashed', linewidth=2, label=f"AOV = {mean:.2f}")
+    plt.axvline(mean + std, color='green', linestyle='dotted', linewidth=2, label=f"+1 STD = {mean + std:.2f}")
+    plt.axvline(mean - std, color='green', linestyle='dotted', linewidth=2, label=f"-1 STD = {mean - std:.2f}")
+
+    plt.title("AOV")
+    plt.xlabel("Intäkt")
+    plt.ylabel("Antal")
+    plt.legend()
+    plt.grid(True, linestyle='--', alpha=0.6)
+    plt.savefig("../data/images/fig_average_order_value.png", dpi=200)
+    plt.show()
+
+def average_order_value_without_extremes(df):
+    np_orders = np.array(df.revenue)
+
+    q1 = np.percentile(np_orders, 25)
+    q3 = np.percentile(np_orders, 75)
+    iqr = q3 - q1
+    lower_bound = q1 - 1.5 * iqr
+    upper_bound = q3 + 1.5 * iqr
+
+    filtered_orders = np_orders[(np_orders >= lower_bound) & (np_orders <= upper_bound)]
+
+    std = np.std(filtered_orders)
+
+    mean = np.mean(filtered_orders)
+
+    plt.figure(figsize=(8, 5))
+    plt.hist(filtered_orders, bins=20, edgecolor='black', alpha=0.7)
+    plt.axvline(mean, color='red', linestyle='dashed', linewidth=2, label=f"AOV = {mean:.2f}")
+    plt.axvline(mean + std, color='green', linestyle='dotted', linewidth=2, label=f"+1 STD = {mean + std:.2f}")
+    plt.axvline(mean - std, color='green', linestyle='dotted', linewidth=2, label=f"-1 STD = {mean - std:.2f}")
+
+    plt.title("AOV (Extremvärde borttagna)")
+    plt.xlabel("Intäkt")
+    plt.ylabel("Antal")
+    plt.legend()
+    plt.grid(True, linestyle='--', alpha=0.6)
+    plt.savefig("../data/images/fig_average_order_value_without_extremes.png", dpi=200)
+    plt.show()
+
+def spread_box(ax, values, title, xlabel, grid: bool = True):
+    ax.boxplot(values, vert=False)
+    ax.set_title(title)
+    ax.set_xlabel(xlabel)
+    ax.grid(grid, axis="x")
+    plt.savefig("../data/images/fig_spread_box.png", dpi=200)
+
+def spread_box_without_extremes(ax, values, title, xlabel, grid: bool = True):
+    np_orders = np.array(values)
+
+    q1 = np.percentile(np_orders, 25)
+    q3 = np.percentile(np_orders, 75)
+    iqr = q3 - q1
+    lower_bound = q1 - 1.5 * iqr
+    upper_bound = q3 + 1.5 * iqr
+
+    filtered_orders = np_orders[(np_orders >= lower_bound) & (np_orders <= upper_bound)]
+
+    ax.boxplot(filtered_orders, vert=False)
+    ax.set_title(title)
+    ax.set_xlabel(xlabel)
+    ax.grid(grid, axis="x")
+    plt.savefig("../data/images/fig_spread_box_without_extremes.png", dpi=200)

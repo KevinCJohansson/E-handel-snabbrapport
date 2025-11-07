@@ -20,7 +20,7 @@ Detta projekt analyserar försäljningsdata från en e-handelsplattform för att
 - **Städer som står för störst del av intäkten:** 1. Stockholm 2. Göteborg 3. Malmö
 - **Månad med högsta intäkter:** Januari med 664 083.32 kr
 - **Vecka med högsta intäkter:** v22, i mitten av Juni 
-- **Genomsnittlig värde av en order:**
+- **Genomsnittlig värde av en order:** 1401kr (1232 utan extremvärden)
 - **Spridning mellan ordrar:**
 - **Topp 3 kategorier:** 1. Elektronik 2. Sport 3. Kläder
 - **Eventuella avvikelser:**
@@ -36,6 +36,11 @@ Detta projekt analyserar försäljningsdata från en e-handelsplattform för att
 ![Intäkt per stad](../data/images/inakt_per_stad.png)
 ![Intäkt per kategori](../data/images/inakt_per_kategori.png)
 ![Intäkt per stad med avvikelsemarkering](..data/images/fig_city_revenue.png)
+![Average order value](..data/images/fig_average_order_value.png)
+![Average order value utan extremvärden](..data/images/fig_average_order_value_without_extremes.png)
+![Average order value spridning](..data/images/fig_spread_box.png)
+![Average order value spridning](..data/images/fig_spread_box_without_extremes.png)
+
 
 
 ## Miljö

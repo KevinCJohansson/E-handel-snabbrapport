@@ -122,3 +122,6 @@ def revenue_order(df,column="revenue"):
 
 def month_revenue(df, column="month"):
     return df.groupby(column)["revenue"].sum()
+
+def order_value(df, column="revenue"):
+    return df.groupby(column)["revenue"]
